@@ -5,5 +5,6 @@ settings = {
                  '"learn" - practice existing data\n'
                  '"exit" - exit the app\n'
                  'Your command: ',
+    'delete_words': ['delete', 'del', 'drop', 'erase'],
     'stop_words': ['', 'stop', 'exit', 'e', 'quit', 'q']
 }
