@@ -28,7 +28,7 @@ def show_cards():
             elif answer in settings['delete_words']:
                 file.close()
                 delete_card(data, id)
-                show_cards()
+                return
             print(f'Answer: {data[id]["answer"]}\n')
             ids.remove(id)
         print('You answered all questions!\n')
