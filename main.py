@@ -20,8 +20,8 @@ def show_cards():
 
 # adds questions to the DB
 def add_cards():
-    question = input('\nEnter a question: ')
-    answer = input('\nEnter an answer: ')
+    question = bytes(input('\nEnter a question: '), "utf-8").decode("unicode_escape")
+    answer = bytes(input('\nEnter an answer: '), "utf-8").decode("unicode_escape")
     if question in settings['stop_words'] or answer in settings['stop_words']:
         return
     with open(settings['data_file']) as file:
