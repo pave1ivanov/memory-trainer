@@ -7,6 +7,8 @@ What the tool does:
 
 How it works:
 
+    - To start the tool execute main.py
+
     - To add a question/answer pair to the database:
     1. Click "Add" in the top-left corner
     2. Enter your question into the upper text area
