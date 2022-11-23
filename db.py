@@ -32,7 +32,17 @@ class DataBase:
 
     # returns list with question and answer
     def get_card(self) -> tuple:
-        card = self.cur.execute("SELECT * FROM question ORDER BY time ASC").fetchone()
+        # retrieving from db a random question/answer pair from 5 that have been shown least recently
+        card = self.cur.execute('''SELECT * 
+                                     FROM question
+                                    WHERE time IN 
+                                        (
+                                            SELECT time 
+                                            FROM question 
+                                            ORDER BY time ASC
+                                            LIMIT 5
+                                         )
+                                    ORDER BY RANDOM()''').fetchone()
         if card:
             self.cur.execute("UPDATE question SET time = ? WHERE id=?", (datetime.datetime.now(), card[0]))
             self.con.commit()
