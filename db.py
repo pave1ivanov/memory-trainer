@@ -27,8 +27,6 @@ class DataBase:
         self.con.commit()
         # DELETE 3 LINES BELOW ))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
         cursor = self.con.execute("SELECT * FROM question")
-        for row in cursor:
-            print(row)
 
     # returns list with question and answer
     def get_card(self) -> tuple:

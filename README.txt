@@ -22,7 +22,7 @@ How it works:
     4. Hit Enter key on your keyboard
     5. An answer will appear in under the question in the upper text area
     6. Compare your answer with the answer presented
-    8. To continue training click "Next question" in the top-right corner or press right arrow key
+    8. To continue training click "Next question" in the top-right corner
 
     - To delete a question/answer pair click "delete" on the bottom of the window when the question is presented
 

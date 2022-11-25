@@ -111,9 +111,6 @@ class Window:
         # Adding answer to the question to the upper text area after the enter/return key was pressed
         self.lower_text.bind('<Return>', lambda e: self.show_answer())
 
-        # Switching to the next question by pressing Tab
-        self.root.bind('<Right>', lambda e: self.load_question())
-
     # Showing answer under the question
     def show_answer(self):
         if not self.save_button.grid_info() and 'Answer' not in self.upper_text.get("1.0", tk.END):
